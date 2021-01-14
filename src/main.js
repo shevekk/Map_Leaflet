@@ -31,7 +31,7 @@ Map.Main = class Main
     Map.Config.load(function()
     {
       me.map = L.map('map', {
-        center: [48.856944, 2.35138],
+        center: [45.758889, 4.841389],
         zoom: 12,
         layers: [me.communeLayerGroup]
       });

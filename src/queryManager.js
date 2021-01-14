@@ -30,9 +30,7 @@ Map.QueryManager = class QueryManager
       ?commune wdt:P31 wd:Q484170 .
       ?commune wdt:P1082 ?pop.
       ?commune wdt:P625 ?coords.
-      ?coords wikibase:geoLatitude ?lat.
-      ?coords wikibase:geoLongitude ?lon.
-      FILTER((?coords, "Point(${lng} ${lat})") < ${distance})
+      FILTER(geof:distance(?coords, "Point(${lng} ${lat})") < ${distance})
       
       SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fr,en". }
     } 
