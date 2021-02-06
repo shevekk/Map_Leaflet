@@ -7,10 +7,14 @@ if (typeof Map == 'undefined') {
  */
 Map.Config = class Config 
 {
-  /*
-   * @property {Object}          communeLimit               Max numbers of commune visible
+  /**
+   * @property {Number}          communeLimit                Max numbers of commune visible
+   * @property {Object}          buildingsIcons              Icons of buildings
+   * @property {Number}          buildingsMinZoom            Min zoom of building zoom
    */
   static communeLimit;
+  static buildingsIcons;
+  static buildingsMinZoom;
 
   constructor() 
   {
@@ -28,7 +32,9 @@ Map.Config = class Config
     let jqxhr = $.getJSON(fileName, null)
     .done(function(content)
     {
-      Map.Config.communeLimit = content.COMMUNE_LIMIT;
+      Map.Config.communeLimit = content.COMMUNE_LIMIT
+      Map.Config.buildingsIcons = content.BUILDINGS_ICONS;
+      Map.Config.buildingsMinZoom = content.BUILDING_MIN_ZOOM;
 
       callback();
     })

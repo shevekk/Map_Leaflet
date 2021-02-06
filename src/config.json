@@ -1,3 +1,17 @@
 {
-	"COMMUNE_LIMIT" : 250
+	"COMMUNE_LIMIT" : 250,
+	"BUILDING_MIN_ZOOM" : 8,
+	"BUILDINGS_ICONS" : 
+	{
+		"http://www.wikidata.org/entity/Q12518" : "img/tower.svg",
+		"http://www.wikidata.org/entity/Q27686" : "img/hotel.svg",
+		"http://www.wikidata.org/entity/Q23413" : "img/castle.svg",
+		"http://www.wikidata.org/entity/Q33506" : "img/museum.svg",
+		"http://www.wikidata.org/entity/Q1329623" : "img/cultural.svg",
+		"http://www.wikidata.org/entity/Q24354" : "img/theater.png",
+		"http://www.wikidata.org/entity/Q16560" : "img/palace.png",
+		"http://www.wikidata.org/entity/Q39715" : "img/lighthouse.jpg",
+		"http://www.wikidata.org/entity/Q7075" : "img/library.svg",
+		"http://www.wikidata.org/entity/Q1244442" : "img/school.svg"
+	}
 }

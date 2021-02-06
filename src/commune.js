@@ -7,7 +7,7 @@ if (typeof Map == 'undefined') {
  */
 Map.Commune = class Commune 
 {
-  /*
+  /**
    * Create the commune
    * @property {String}        commune           Commune URI
    * @property {String}        communeLabel      Commune Name
@@ -23,11 +23,11 @@ Map.Commune = class Commune
     this.coords = Map.MapTransform.transformPoint(wkt);
   }
   
-  /*
+  /**
    * Display commune in the map (draw circle)
-   * @param {L.LayerGroup}        communeLayerGroup           Commune layer group
+   * @param {L.LayerGroup}        layerGroup           Display layer group
    */
-  draw(communeLayerGroup)
+  draw(layerGroup)
   {
     var circle = L.circle(this.coords, {
       color: 'red',
@@ -37,6 +37,6 @@ Map.Commune = class Commune
     })
     .bindPopup("<a href='"+this.commune+"' target='_blank'>" + this.communeLabel + "</a>");
     
-    communeLayerGroup.addLayer(circle);
+    layerGroup.addLayer(circle);
   }
 }
